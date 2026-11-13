@@ -1,0 +1,23 @@
+# Core deep learning & audio
+torch==2.5.1
+torchaudio==2.5.1
+transformers==4.46.3
+
+# Data processing & machine learning
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.5.2
+
+# Audio processing
+librosa==0.10.2.post1
+soundfile==0.12.1
+
+# Explainability & visualization
+shap==0.46.0
+matplotlib==3.9.2
+
+# Utilities & testing
+pyyaml==6.0.2
+tqdm==4.67.1
+pytest==8.3.3
+

@@ -1,0 +1,52 @@
+# Environments and runtime caches
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+.system_generated/
+
+*.npy
+*.pt
+*.pth
+*.pkl
+*.zip
+*.csv.gz
+data/
+!data/sample/
+
+# Strictly ignore drafts, PRDs, word docs, and report folders
+docs/
+reports/
+report/
+drafts/
+*draft*
+*Draft*
+*prd*
+*PRD*
+prds/
+PRD/
+*.docx
+*.doc
+
+# License-restricted and large binary raw data (Hard Rule 6: DAIC-WOZ license restriction)
+/data/raw/
+/data/processed/
+*.npz
+*.parquet
+*.mp3
+*.flac
+*.bin
+
+# Preserve mock sample dataset while ignoring large external WAV files
+*.wav
+!data/sample/**/*.wav
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

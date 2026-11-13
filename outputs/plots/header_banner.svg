@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <!-- Dark tech gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="50%" stop-color="#0b112c" />
+      <stop offset="100%" stop-color="#060919" />
+    </linearGradient>
+
+    <!-- Neon Cyan to Violet Gradient for Titles -->
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="35%" stop-color="#7000ff" />
+      <stop offset="70%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#00f3ff" />
+    </linearGradient>
+
+    <!-- Accent Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#7000ff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="15" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Subtle Glow for Badges -->
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseGlow {
+      0% { filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.6)) drop-shadow(0 0 25px rgba(112, 0, 255, 0.4)); }
+      50% { filter: drop-shadow(0 0 16px rgba(255, 0, 127, 0.8)) drop-shadow(0 0 35px rgba(0, 243, 255, 0.6)); }
+      100% { filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.6)) drop-shadow(0 0 25px rgba(112, 0, 255, 0.4)); }
+    }
+    @keyframes gridFlow {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 40; }
+    }
+    .neon-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      animation: pulseGlow 4s ease-in-out infinite;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      fill: #8ea7cb;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Mono', Consolas, monospace;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .grid-line {
+      stroke: #14224d;
+      stroke-width: 1;
+      stroke-opacity: 0.4;
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect x="10" y="10" width="1180" height="360" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="2" />
+
+  <!-- Animated Tech Grid Pattern -->
+  <g opacity="0.35">
+    <line x1="10" y1="70" x2="1190" y2="70" class="grid-line" />
+    <line x1="10" y1="130" x2="1190" y2="130" class="grid-line" />
+    <line x1="10" y1="190" x2="1190" y2="190" class="grid-line" />
+    <line x1="10" y1="250" x2="1190" y2="250" class="grid-line" />
+    <line x1="10" y1="310" x2="1190" y2="310" class="grid-line" />
+
+    <line x1="120" y1="10" x2="120" y2="370" class="grid-line" />
+    <line x1="280" y1="10" x2="280" y2="370" class="grid-line" />
+    <line x1="440" y1="10" x2="440" y2="370" class="grid-line" />
+    <line x1="600" y1="10" x2="600" y2="370" class="grid-line" />
+    <line x1="760" y1="10" x2="760" y2="370" class="grid-line" />
+    <line x1="920" y1="10" x2="920" y2="370" class="grid-line" />
+    <line x1="1080" y1="10" x2="1080" y2="370" class="grid-line" />
+  </g>
+
+  <!-- Header Accent Pill -->
+  <g transform="translate(435, 45)">
+    <rect x="0" y="0" width="330" height="32" rx="16" fill="#0d1b3e" stroke="#00f3ff" stroke-width="1.2" opacity="0.9" />
+    <circle cx="20" cy="16" r="5" fill="#00f3ff">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="35" y="21" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#00f3ff" letter-spacing="1.5">RESEARCH PROTOTYPE • MULTIMODAL AI</text>
+  </g>
+
+  <!-- Main Headline Title -->
+  <text x="600" y="145" text-anchor="middle" font-size="44" fill="url(#neonGrad)" class="neon-title" filter="url(#neonGlow)">
+    MULTIMODAL DEPRESSION DETECTION
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="195" text-anchor="middle" font-size="18" class="subtitle">
+    Deep Acoustic-Linguistic Encoders (Wav2Vec2 / MentalBERT) • Cross-Modal Attention • Explainable AI
+  </text>
+
+  <text x="600" y="228" text-anchor="middle" font-size="14" fill="#5f7eaf" font-family="-apple-system, sans-serif" letter-spacing="0.5">
+    Strict Participant-Level Partitioning • EATD-Corpus (Mandarin) &amp; DAIC-WOZ (English) • Multi-Task Clinical Scoring
+  </text>
+
+  <!-- Feature Badge Pills -->
+  <g transform="translate(90, 275)">
+    <!-- Badge 1: PyTorch -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="145" height="38" rx="8" fill="#0a1633" stroke="#ff007f" stroke-width="1.2" />
+      <circle cx="18" cy="19" r="4" fill="#ff007f" />
+      <text x="32" y="24" class="badge-text" fill="#ff70ba">PyTorch 2.5</text>
+    </g>
+
+    <!-- Badge 2: MentalBERT -->
+    <g transform="translate(160, 0)">
+      <rect x="0" y="0" width="155" height="38" rx="8" fill="#0a1633" stroke="#00f3ff" stroke-width="1.2" />
+      <circle cx="18" cy="19" r="4" fill="#00f3ff" />
+      <text x="32" y="24" class="badge-text" fill="#6df7ff">MentalBERT</text>
+    </g>
+
+    <!-- Badge 3: Wav2Vec2 XLS-R -->
+    <g transform="translate(330, 0)">
+      <rect x="0" y="0" width="175" height="38" rx="8" fill="#0a1633" stroke="#7000ff" stroke-width="1.2" />
+      <circle cx="18" cy="19" r="4" fill="#a855f7" />
+      <text x="32" y="24" class="badge-text" fill="#c084fc">Wav2Vec2 XLS-R</text>
+    </g>
+
+    <!-- Badge 4: Cross-Modal Attn -->
+    <g transform="translate(520, 0)">
+      <rect x="0" y="0" width="180" height="38" rx="8" fill="#0a1633" stroke="#00f3ff" stroke-width="1.2" />
+      <circle cx="18" cy="19" r="4" fill="#00f3ff" />
+      <text x="32" y="24" class="badge-text" fill="#6df7ff">Cross-Modal Attn</text>
+    </g>
+
+    <!-- Badge 5: Multi-Task PHQ-8 -->
+    <g transform="translate(715, 0)">
+      <rect x="0" y="0" width="165" height="38" rx="8" fill="#0a1633" stroke="#ffaa00" stroke-width="1.2" />
+      <circle cx="18" cy="19" r="4" fill="#ffaa00" />
+      <text x="32" y="24" class="badge-text" fill="#ffd175">Multi-Task Head</text>
+    </g>
+
+    <!-- Badge 6: SHAP XAI -->
+    <g transform="translate(895, 0)">
+      <rect x="0" y="0" width="135" height="38" rx="8" fill="#0a1633" stroke="#00ffaa" stroke-width="1.2" />
+      <circle cx="18" cy="19" r="4" fill="#00ffaa" />
+      <text x="32" y="24" class="badge-text" fill="#75ffcd">SHAP XAI</text>
+    </g>
+  </g>
+</svg>

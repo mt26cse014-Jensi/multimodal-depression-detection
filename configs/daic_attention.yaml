@@ -1,0 +1,55 @@
+# Configuration for Phase 6: Advanced Fusion with Cross-Modal Attention (DAIC-WOZ)
+# All paths relative to project root.
+
+dataset:
+  name: "daic"
+  manifest_path: "data/processed/daic/manifest.csv"
+  windows_path: "data/processed/daic/windows.parquet"
+  turns_dir: "data/processed/daic/turns"
+  preprocess_config_path: "configs/daic_preprocess.yaml"
+
+features:
+  cache_dir: "data/processed/daic/features_seq"
+
+  text:
+    model_name: "roberta-base"
+    device: "auto"
+    fp16: true
+
+  audio:
+    model_name: "microsoft/wavlm-base-plus"
+    sample_rate: 16000
+    downsample_factor: 2   # 50 fps -> 25 fps
+    device: "auto"
+    fp16: true
+
+model:
+  d_in_text: 768
+  d_in_audio: 768
+  d_model: 128
+  n_heads: 4
+  d_ff: 256
+  hidden_dim: 128
+  dropout: 0.3
+  attn_dropout: 0.1
+
+training:
+  seeds: [42, 123, 456, 789, 2024]
+  scales: [30, 75, 120]
+  phq8_max_score: 24.0
+  class_weight: "balanced"
+  batch_size: 16           # Number of sessions per mini-batch
+  epochs: 60
+  patience: 10
+  lr: 0.0005
+  weight_decay: 0.01
+  reg_loss_weight: 0.25
+  bootstrap_samples: 2000
+  bootstrap_seed: 42
+
+  phase5_results_csv: "results/daic_results.csv"
+  results_csv: "results/daic_phase6_comparison.csv"
+  predictions_csv: "results/daic_attention_dev_predictions.csv"
+  checkpoints_dir: "data/processed/daic/checkpoints_phase6"
+  results_plot: "results/daic/daic_phase6_comparison_barplot.png"
+

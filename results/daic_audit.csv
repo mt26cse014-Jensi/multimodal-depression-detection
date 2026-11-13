@@ -1,0 +1,190 @@
+session_id,folder_name,split,folder_exists,has_audio,has_transcript,has_covarep,has_formant,has_clnf_aus,audio_duration_sec,transcript_rows,has_ellie_lines,scrubbed_entry_count,notes
+300,300_P,test,True,True,True,True,True,True,648.5,174,True,0,
+301,301_P,test,True,True,True,True,True,True,823.9,181,True,0,
+302,302_P,dev,True,True,True,True,True,True,758.8,186,True,0,
+303,303_P,train,True,True,True,True,True,True,985.3,191,True,0,
+304,304_P,train,True,True,True,True,True,True,792.6,204,True,0,
+305,305_P,train,True,True,True,True,True,True,1704.0,405,True,0,
+306,306_P,test,True,True,True,True,True,True,858.1,213,True,1,1 scrubbed
+307,307_P,dev,True,True,True,True,True,True,1238.8,277,True,0,
+308,308_P,test,True,True,True,True,True,True,867.6,224,True,0,
+309,309_P,test,True,True,True,True,True,True,705.8,176,True,0,
+310,310_P,train,True,True,True,True,True,True,844.9,240,True,0,
+311,311_P,test,True,True,True,True,True,True,785.6,226,True,0,
+312,312_P,train,True,True,True,True,True,True,790.0,210,True,3,3 scrubbed
+313,313_P,train,True,True,True,True,True,True,753.8,194,True,1,1 scrubbed
+314,314_P,test,True,True,True,True,True,True,1546.7,471,True,0,
+315,315_P,train,True,True,True,True,True,True,975.4,224,True,3,3 scrubbed
+316,316_P,train,True,True,True,True,True,True,869.0,239,True,2,2 scrubbed
+317,317_P,train,True,True,True,True,True,True,804.9,198,True,0,
+318,318_P,train,True,True,True,True,True,True,588.4,138,True,0,
+319,319_P,train,True,True,True,True,True,True,679.7,186,True,0,
+320,320_P,train,True,True,True,True,True,True,840.7,280,True,0,
+321,321_P,train,True,True,True,True,True,True,821.9,233,True,0,
+322,322_P,train,True,True,True,True,True,True,1047.1,293,True,0,
+323,323_P,test,True,True,True,True,True,True,837.0,218,True,0,
+324,324_P,train,True,True,True,True,True,True,721.3,256,True,1,1 scrubbed
+325,325_P,train,True,True,True,True,True,True,875.0,178,True,0,
+326,326_P,train,True,True,True,True,True,True,699.2,198,True,0,
+327,327_P,train,True,True,True,True,True,True,680.8,175,True,2,2 scrubbed
+328,328_P,train,True,True,True,True,True,True,1065.2,238,True,4,4 scrubbed
+329,329_P,test,True,True,True,True,True,True,706.3,129,True,0,
+330,330_P,train,True,True,True,True,True,True,771.5,203,True,0,
+331,331_P,dev,True,True,True,True,True,True,850.7,223,True,0,
+332,332_P,test,True,True,True,True,True,True,874.1,249,True,0,
+333,333_P,train,True,True,True,True,True,True,969.3,253,True,0,
+334,334_P,test,True,True,True,True,True,True,980.0,234,True,0,
+335,335_P,dev,True,True,True,True,True,True,830.1,271,True,1,1 scrubbed
+336,336_P,train,True,True,True,True,True,True,944.5,240,True,1,1 scrubbed
+337,337_P,test,True,True,True,True,True,True,1871.2,442,True,0,
+338,338_P,train,True,True,True,True,True,True,596.8,138,True,1,1 scrubbed
+339,339_P,train,True,True,True,True,True,True,862.9,233,True,0,
+340,340_P,train,True,True,True,True,True,True,599.3,152,True,0,
+341,341_P,train,True,True,True,True,True,True,867.5,276,True,0,
+343,343_P,train,True,True,True,True,True,True,927.3,238,True,0,
+344,344_P,train,True,True,True,True,True,True,1090.5,281,True,0,
+345,345_P,train,True,True,True,True,True,True,793.9,179,True,0,
+346,346_P,dev,True,True,True,True,True,True,1221.8,385,True,1,1 scrubbed
+347,347_P,train,True,True,True,True,True,True,611.6,149,True,0,
+348,348_P,train,True,True,True,True,True,True,719.4,206,True,0,
+349,349_P,test,True,True,True,True,True,True,1216.0,306,True,0,
+350,350_P,train,True,True,True,True,True,True,881.8,212,True,0,
+351,351_P,train,True,True,True,True,True,True,769.6,207,True,0,
+352,352_P,train,True,True,True,True,True,True,760.1,136,True,0,
+353,353_P,train,True,True,True,True,True,True,786.0,196,True,1,1 scrubbed
+354,354_P,test,True,True,True,True,True,True,576.8,177,True,0,
+355,355_P,train,True,True,True,True,True,True,674.7,178,True,0,
+356,356_P,train,True,True,True,True,True,True,954.0,249,True,0,
+357,357_P,train,True,True,True,True,True,True,414.8,126,True,0,
+358,358_P,train,True,True,True,True,True,True,647.9,151,True,0,
+359,359_P,test,True,True,True,True,True,True,1033.6,254,True,2,2 scrubbed
+360,360_P,train,True,True,True,True,True,True,440.4,83,True,0,
+361,361_P,test,True,True,True,True,True,True,641.9,118,True,0,
+362,362_P,train,True,True,True,True,True,True,590.2,129,True,1,1 scrubbed
+363,363_P,train,True,True,True,True,True,True,1227.1,230,True,1,1 scrubbed
+364,364_P,train,True,True,True,True,True,True,1781.5,473,True,0,
+365,365_P,test,True,True,True,True,True,True,1386.1,407,True,3,3 scrubbed
+366,366_P,train,True,True,True,True,True,True,1312.7,356,True,0,
+367,367_P,dev,True,True,True,True,True,True,1637.0,375,True,0,
+368,368_P,train,True,True,True,True,True,True,1354.8,314,True,1,1 scrubbed
+369,369_P,train,True,True,True,True,True,True,1041.1,288,True,0,
+370,370_P,train,True,True,True,True,True,True,1208.6,213,True,0,
+371,371_P,train,True,True,True,True,True,True,911.7,233,True,0,
+372,372_P,train,True,True,True,True,True,True,1513.7,417,True,1,1 scrubbed
+373,373_P,test,True,True,True,True,True,True,1265.1,261,True,0,
+374,374_P,train,True,True,True,True,True,True,1287.7,337,True,0,
+375,375_P,train,True,True,True,True,True,True,621.2,152,True,0,
+376,376_P,train,True,True,True,True,True,True,1025.7,273,True,0,
+377,377_P,dev,True,True,True,True,True,True,1328.3,340,True,1,1 scrubbed
+378,378_P,test,True,True,True,True,True,True,873.4,223,True,1,1 scrubbed
+379,379_P,train,True,True,True,True,True,True,1002.1,328,True,0,
+380,380_P,train,True,True,True,True,True,True,1966.2,458,True,0,
+381,381_P,dev,False,False,False,False,False,False,,,,,Missing archive/folder (in dev split)
+382,382_P,dev,True,True,True,True,True,True,824.2,241,True,0,
+383,383_P,train,True,True,True,True,True,True,1369.1,304,True,2,2 scrubbed
+384,384_P,test,True,True,True,True,True,True,1056.8,248,True,0,
+385,385_P,train,True,True,True,True,True,True,536.3,125,True,0,
+386,386_P,train,True,True,True,True,True,True,1039.4,268,True,0,
+387,387_P,test,True,True,True,True,True,True,602.8,156,True,1,1 scrubbed
+388,388_P,dev,True,True,True,True,True,True,831.2,168,True,0,
+389,389_P,dev,True,True,True,True,True,True,953.2,215,True,0,
+390,390_P,dev,True,True,True,True,True,True,1356.7,353,True,0,
+391,391_P,train,True,True,True,True,True,True,680.1,195,True,0,
+392,392_P,train,True,True,True,True,True,True,655.7,177,True,0,
+393,393_P,train,True,True,True,True,True,True,630.0,162,True,1,1 scrubbed
+395,395_P,dev,True,True,True,True,True,True,889.2,209,True,3,3 scrubbed
+396,396_P,test,True,True,True,True,True,True,780.4,211,True,0,
+397,397_P,train,False,False,False,False,False,False,,,,,Missing archive/folder (in train split)
+399,399_P,test,True,True,True,True,True,True,734.0,181,True,0,
+400,400_P,train,True,True,True,True,True,True,936.7,232,True,0,
+401,401_P,train,True,True,True,True,True,True,934.2,260,True,0,
+402,402_P,train,True,True,True,True,True,True,955.5,220,True,0,
+403,403_P,dev,True,True,True,True,True,True,862.5,192,True,0,
+404,404_P,dev,True,True,True,True,True,True,1130.6,274,True,0,
+405,405_P,test,True,True,True,True,True,True,1570.2,456,True,0,
+406,406_P,dev,True,True,True,True,True,True,721.8,172,True,0,
+407,407_P,test,True,True,True,True,True,True,1252.4,372,True,1,1 scrubbed
+408,408_P,test,True,True,True,True,True,True,715.9,161,True,0,
+409,409_P,train,True,True,True,True,True,True,1032.4,334,True,0,
+410,410_P,test,True,True,True,True,True,True,1065.0,270,True,0,
+411,411_P,test,True,True,True,True,True,True,1382.9,324,True,0,
+412,412_P,train,True,True,True,True,True,True,856.9,224,True,0,
+413,413_P,dev,True,True,True,True,True,True,996.8,250,True,1,1 scrubbed
+414,414_P,train,True,True,True,True,True,True,984.3,268,True,1,1 scrubbed
+415,415_P,train,True,True,True,True,True,True,780.7,211,True,0,
+416,416_P,train,True,True,True,True,True,True,865.8,250,True,1,1 scrubbed
+417,417_P,dev,True,True,True,True,True,True,886.3,242,True,0,
+418,418_P,dev,True,True,True,True,True,True,1089.2,304,True,3,3 scrubbed
+419,419_P,train,True,True,True,True,True,True,906.3,248,True,0,
+420,420_P,dev,True,True,True,True,True,True,1048.9,269,True,0,
+421,421_P,test,True,True,True,True,True,True,837.0,224,True,3,3 scrubbed
+422,422_P,dev,True,True,True,True,True,True,1334.6,360,True,1,1 scrubbed
+423,423_P,train,True,True,True,True,True,True,995.9,258,True,0,
+424,424_P,test,True,True,True,True,True,True,1062.7,250,True,0,
+425,425_P,train,True,True,True,True,True,True,1154.8,267,True,0,
+426,426_P,train,True,True,True,True,True,True,856.8,303,True,0,
+427,427_P,train,True,True,True,True,True,True,871.8,290,True,0,
+428,428_P,train,True,True,True,True,True,True,704.1,215,True,0,
+429,429_P,train,True,True,True,True,True,True,957.5,310,True,5,5 scrubbed
+430,430_P,train,True,True,True,True,True,True,908.8,231,True,0,
+431,431_P,test,True,True,True,True,True,True,833.8,226,True,1,1 scrubbed
+432,432_P,test,True,True,True,True,True,True,935.9,277,True,0,
+433,433_P,train,True,True,True,True,True,True,801.9,235,True,0,
+434,434_P,train,True,True,True,True,True,True,1319.9,303,True,1,1 scrubbed
+435,435_P,test,True,True,True,True,True,True,1185.0,296,True,1,1 scrubbed
+436,436_P,dev,True,True,True,True,True,True,687.9,191,True,0,
+437,437_P,train,True,True,True,True,True,True,849.6,219,True,0,
+438,438_P,test,True,True,True,True,True,True,1429.9,298,True,0,
+439,439_P,dev,True,True,True,True,True,True,1284.6,277,True,0,
+440,440_P,dev,True,False,False,False,False,False,,,,,
+441,441_P,train,True,True,True,True,True,True,971.3,267,True,0,
+442,442_P,test,True,True,True,True,True,True,950.0,311,True,0,
+443,443_P,train,True,True,True,True,True,True,701.3,198,True,0,
+444,444_P,train,True,True,True,True,True,True,1310.5,423,True,0,
+445,445_P,train,True,True,True,True,True,True,709.6,178,True,0,
+446,446_P,train,True,True,True,True,True,True,998.4,273,True,0,
+447,447_P,train,True,True,True,True,True,True,820.3,195,True,1,1 scrubbed
+448,448_P,train,True,True,True,True,True,True,1213.0,301,True,1,1 scrubbed
+449,449_P,train,True,True,True,True,True,True,1029.7,224,True,1,1 scrubbed
+450,450_P,test,True,True,True,True,True,True,1275.2,360,True,1,1 scrubbed
+451,451_P,dev,True,True,True,True,True,True,1188.4,281,False,0,no Ellie lines
+452,452_P,test,True,True,True,True,True,True,889.1,234,True,0,
+453,453_P,test,True,True,True,True,True,True,1032.2,310,True,0,
+454,454_P,train,True,True,True,True,True,True,804.1,230,True,0,
+455,455_P,train,True,True,True,True,True,True,750.4,215,True,0,
+456,456_P,train,True,True,True,True,True,True,882.7,208,True,0,
+457,457_P,train,True,True,True,True,True,True,962.3,278,True,2,2 scrubbed
+458,458_P,dev,True,True,True,True,True,True,949.7,119,False,0,no Ellie lines
+459,459_P,train,True,True,True,True,True,True,975.1,270,True,1,1 scrubbed
+461,461_P,test,True,True,True,True,True,True,981.5,238,True,0,
+462,462_P,test,True,True,True,True,True,True,965.1,270,True,0,
+463,463_P,train,True,True,True,True,True,True,834.7,199,True,0,
+464,464_P,train,True,True,True,True,True,True,980.3,450,True,0,
+465,465_P,test,True,True,True,True,True,True,1163.4,394,True,1,1 scrubbed
+466,466_P,test,True,True,True,True,True,True,1566.5,425,True,2,2 scrubbed
+467,467_P,test,True,True,True,True,True,True,1002.4,331,True,3,3 scrubbed
+468,468_P,train,True,True,True,True,True,True,939.8,255,True,0,
+469,469_P,test,True,True,True,True,True,True,1126.6,265,True,1,1 scrubbed
+470,470_P,test,True,True,True,True,True,True,955.4,252,True,1,1 scrubbed
+471,471_P,train,True,True,True,True,True,True,995.3,220,True,0,
+472,472_P,dev,True,True,True,True,True,True,903.0,241,True,0,
+473,473_P,train,True,True,True,True,True,True,533.3,153,True,0,
+474,474_P,train,True,True,True,True,True,True,927.4,285,True,1,1 scrubbed
+475,475_P,train,True,True,True,True,True,True,587.2,153,True,0,
+476,476_P,dev,True,True,True,True,True,True,608.8,174,True,0,
+477,477_P,dev,True,True,True,True,True,True,1244.7,343,True,3,3 scrubbed
+478,478_P,train,True,True,True,True,True,True,936.2,234,True,3,3 scrubbed
+479,479_P,train,True,True,True,True,True,True,910.4,248,True,0,
+480,480_P,test,True,True,True,True,True,True,865.7,193,False,0,no Ellie lines
+481,481_P,test,True,True,True,True,True,True,1116.4,347,True,1,1 scrubbed
+482,482_P,dev,True,True,True,True,True,True,1019.0,350,True,0,
+483,483_P,dev,True,True,False,True,False,True,1577.0,,,,
+484,484_P,dev,True,True,False,True,False,True,995.5,,,,
+485,485_P,train,True,True,True,True,True,True,602.7,167,True,0,
+486,486_P,train,True,True,False,True,False,True,682.3,,,,
+487,487_P,train,True,True,False,False,False,True,1023.5,,,,
+488,488_P,train,True,True,False,False,False,True,884.9,,,,
+489,489_P,dev,True,True,False,False,False,True,704.7,,,,
+490,490_P,dev,True,True,False,False,False,False,,,,,
+491,491_P,train,True,True,False,False,False,False,,,,,
+492,492_P,dev,True,True,False,False,False,False,,,,,

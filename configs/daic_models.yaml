@@ -1,0 +1,101 @@
+dataset:
+  name: daic
+  daic_dir: data/raw/daic
+  zips_dir: data/raw/daicz_zips
+  manifest_path: data/processed/daic/manifest.csv
+  windows_path: data/processed/daic/windows.parquet
+  turns_dir: data/processed/daic/turns
+  preprocess_config_path: configs/daic_preprocess.yaml
+features:
+  cache_dir: data/processed/daic/features
+  deduplicate_windows: true
+  text:
+    model_name: mental/mental-bert-base-uncased
+    fallback_model_name: roberta-base
+    alt_fallback_model_name: bert-base-uncased
+    max_length: 512
+    batch_size: 16
+    device: auto
+    fp16: false
+    ablation_include_speaker_tags: false
+  audio:
+    model_name: microsoft/wavlm-base-plus
+    sample_rate: 16000
+    extraction_mode: turn_moments
+    min_turn_duration_sec: 0.1
+    max_duration_sec: 132.0
+    device: auto
+    fp16: false
+training:
+  seeds:
+  - 42
+  - 123
+  - 456
+  - 789
+  - 2024
+  scales:
+  - 30
+  - 75
+  - 120
+  phq8_max_score: 24.0
+  class_weight: balanced
+  l2_norm_modalities: false
+  bootstrap_samples: 2000
+  bootstrap_seed: 42
+  mlp:
+    hidden_dim: 128
+    dropout: 0.3
+    epochs: 60
+    patience: 10
+    batch_size: 64
+    lr: 0.001
+    weight_decay: 0.01
+    reg_loss_weight: 0.25
+  tuning_grid:
+    lr:
+    - 0.0003
+    - 0.001
+    weight_decay:
+    - 0.001
+    - 0.01
+    reg_loss_weight:
+    - 0.1
+    - 0.25
+    - 0.5
+  frozen_hparams:
+    text_only:
+      hidden_dim: 128
+      dropout: 0.3
+      epochs: 60
+      patience: 10
+      batch_size: 64
+      lr: 0.001
+      weight_decay: 0.001
+      reg_loss_weight: 0.1
+    audio_only:
+      hidden_dim: 128
+      dropout: 0.3
+      epochs: 60
+      patience: 10
+      batch_size: 64
+      lr: 0.0003
+      weight_decay: 0.001
+      reg_loss_weight: 0.1
+    late_fusion:
+      hidden_dim: 128
+      dropout: 0.3
+      epochs: 60
+      patience: 10
+      batch_size: 64
+      lr: 0.0003
+      weight_decay: 0.01
+      reg_loss_weight: 0.25
+  test_evaluated: false
+  checkpoints_dir: data/processed/daic/checkpoints
+  results_csv: results/daic_results.csv
+  ablation_csv: results/daic_ablation.csv
+  dev_predictions_csv: results/daic_dev_predictions.csv
+  test_predictions_csv: results/daic_test_predictions.csv
+  ablation_predictions_csv: results/daic_ablation_predictions.csv
+  tuning_csv: results/daic/daic_dev_tuning.csv
+  results_plot: results/daic/daic_comparison_barplot.png

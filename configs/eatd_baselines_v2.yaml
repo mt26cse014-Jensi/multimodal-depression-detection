@@ -1,0 +1,51 @@
+# Configuration for Phase 2b: EATD-Corpus Single-Modality Baselines v2
+# Uses averaged answer embeddings (over valid clips) and inner-CV LogReg C tuning.
+
+dataset:
+  name: "eatd"
+  raw_dir: "data/raw/eatd"
+  processed_dir: "data/processed/eatd"
+  manifest_path: "data/processed/eatd/manifest.csv"
+  folds_path: "data/processed/eatd/folds.json"
+  audio_dir: "data/processed/eatd/audio"
+
+features:
+  cache_dir: "data/processed/eatd/embeddings"
+  aggregation: "mean"   # average across valid answer embeddings ("mean" vs v1 "concat")
+
+  text:
+    model_name: "hfl/chinese-roberta-wwm-ext"
+    max_length: 512
+    batch_size: 1
+    device: "cpu"
+
+  audio:
+    model_name: "facebook/wav2vec2-xls-r-300m"
+    alt_model_name: "microsoft/wavlm-base-plus"
+    sample_rate: 16000
+    max_duration_sec: 60.0
+    batch_size: 1
+    device: "cpu"
+
+training:
+  seeds: [42, 123, 456]
+  class_weight: "balanced"
+  include_summary_rows: false
+  results_dir: "results/eatd"
+  results_csv: "results/eatd/eatd_baselines_v2.csv"
+  results_best_c_csv: "results/eatd/eatd_baselines_v2_best_c.csv"
+  results_plot: "results/eatd/eatd_baselines_v2_barplot.png"
+  logreg:
+    c_grid: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0]
+    inner_cv_folds: 5
+    inner_cv_scoring: "roc_auc"
+    max_iter: 2000
+    solver: "lbfgs"
+  mlp:
+    hidden_dim: 128
+    dropout: 0.3
+    lr: 0.001
+    weight_decay: 0.01
+    epochs: 30
+    batch_size: 32
+

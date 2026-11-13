@@ -1,0 +1,70 @@
+# Configuration for Phase 1: EATD-Corpus Preprocessing and Manifest
+dataset:
+  name: "eatd"
+  raw_dir: "data/raw/eatd"
+  processed_dir: "data/processed/eatd"
+  manifest_path: "data/processed/eatd/manifest.csv"
+  folds_path: "data/processed/eatd/folds.json"
+  audio_dir: "data/processed/eatd/audio"
+
+label:
+  rule: "new_label.txt (standard SDS score >= 53 is depressed)"
+  threshold: 53.0
+  expected_total: 162
+  expected_control: 132
+  expected_depressed: 30
+
+audio:
+  target_sr: 16000
+  to_mono: true
+  top_db: 30.0
+  frame_len_ms: 30.0
+  hop_len_ms: 10.0
+  min_duration_sec: 1.0
+
+folds:
+  n_splits: 5
+  random_seed: 42
+  stratify_col: "label"
+
+plots:
+  results_dir: "results"
+  class_counts: "results/eatd_class_counts.png"
+  clip_durations: "results/eatd_clip_durations.png"
+  text_lengths: "results/eatd_text_lengths.png"
+
+# ── Phase 2: Feature Extraction & Baseline Training ──
+
+features:
+  cache_dir: "data/processed/eatd/embeddings"
+
+  text:
+    model_name: "hfl/chinese-roberta-wwm-ext"
+    max_length: 512
+    batch_size: 1       # CPU-safe; increase on GPU
+    device: "cpu"
+
+  audio:
+    # Primary encoder (multilingual, covers Mandarin)
+    model_name: "facebook/wav2vec2-xls-r-300m"
+    # Comparison encoder
+    alt_model_name: "microsoft/wavlm-base-plus"
+    sample_rate: 16000
+    max_duration_sec: 60.0   # safety cap
+    batch_size: 1            # CPU-safe; increase on GPU
+    device: "cpu"
+
+training:
+  seeds: [42, 123, 456]
+  class_weight: "balanced"
+  results_dir: "results/eatd"
+  results_csv: "results/eatd/eatd_baselines.csv"
+  results_plot: "results/eatd/eatd_baselines_barplot.png"
+  mlp:
+    hidden_dim: 128
+    dropout: 0.3
+    lr: 0.001
+    weight_decay: 0.01
+    epochs: 30
+    batch_size: 32
+

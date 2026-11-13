@@ -1,0 +1,43 @@
+# Phase 4 — DAIC-WOZ Preprocessing Configuration
+# All paths are relative to the project root.
+
+# ── Data locations ─────────────────────────────────────────────────────────────
+daic_dir: data/raw/daic
+zips_dir: data/raw/daicz_zips   # read-only fallback when extracted files are missing/empty
+labels_dir: data/raw/daic_labels
+processed_dir: data/processed/daic
+
+# ── Session exclusions (official AVEC 2017) ────────────────────────────────────
+excluded_sessions: [342, 394, 398, 460]
+
+# ── Transcript parsing ─────────────────────────────────────────────────────────
+# Sessions with IDs > this value use the UtteranceID-prefixed format for Ellie lines.
+transcript_format_threshold: 363
+
+# Small-talk removal: skip Participant turns before the first Ellie turn at or
+# after this many seconds (set to 0 to disable).
+small_talk_cutoff_sec: 60.0
+
+# Session 409: PHQ8_Score=10 meets >=10 depressed threshold (official CSV has 0).
+# Original value is preserved in manifest.csv and cleaning_log.csv.
+label_overrides:
+  409: 1
+
+# Interruption windows to drop (both speakers) — [start_sec, end_sec].
+interruption_windows:
+  373: [[352, 420]]
+  444: [[286, 387]]
+
+# ── Audio processing ───────────────────────────────────────────────────────────
+audio:
+  target_sr: 16000
+  min_turn_duration_sec: 0.1   # turns shorter than this are skipped
+
+# ── Windowing ──────────────────────────────────────────────────────────────────
+windowing:
+  scales: [30, 75, 120]           # target window lengths in seconds
+  duration_tolerance: 0.10        # +/- 10% tolerance around target scale
+  dev_test_windows_per_session: 200
+  train_overlap_ratio: 0.5        # overlap between consecutive train windows
+  seed: 42
+

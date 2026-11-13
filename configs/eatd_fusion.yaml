@@ -1,0 +1,48 @@
+# Configuration for Phase 3: EATD-Corpus Late-Fusion Model
+# Reuses cached Phase 2 embeddings, Phase 2b inner-CV LogReg tuning, and baseline MLP settings.
+
+dataset:
+  name: "eatd"
+  raw_dir: "data/raw/eatd"
+  processed_dir: "data/processed/eatd"
+  manifest_path: "data/processed/eatd/manifest.csv"
+  folds_path: "data/processed/eatd/folds.json"
+  audio_dir: "data/processed/eatd/audio"
+
+features:
+  cache_dir: "data/processed/eatd/embeddings"
+  primary_aggregation: "mean"         # chosen in Phase 2b prior to fusion
+  aggregations: ["mean", "concat"]    # primary ("mean") + secondary ("concat")
+  l2_norm_modalities: false
+
+  text:
+    model_name: "hfl/chinese-roberta-wwm-ext"
+
+  audio:
+    model_name: "facebook/wav2vec2-xls-r-300m"
+    alt_model_name: "microsoft/wavlm-base-plus"
+
+baselines:
+  v2_csv: "results/eatd/eatd_baselines_v2.csv"
+
+training:
+  seeds: [42, 123, 456]
+  class_weight: "balanced"
+  results_runs_csv: "results/eatd/eatd_fusion.csv"
+  results_comparison_csv: "results/eatd/eatd_comparison.csv"
+  results_predictions_csv: "results/eatd/eatd_fusion_predictions.csv"
+  results_plot: "results/eatd/eatd_comparison_barplot.png"
+  logreg:
+    c_grid: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0]
+    inner_cv_folds: 5
+    inner_cv_scoring: "roc_auc"
+    max_iter: 2000
+    solver: "lbfgs"
+  mlp:
+    hidden_dim: 128
+    dropout: 0.3
+    lr: 0.001
+    weight_decay: 0.01
+    epochs: 30
+    batch_size: 32
+

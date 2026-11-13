@@ -1,0 +1,29 @@
+# Configuration for Phase 7: Explainability & Limitations (DAIC-WOZ)
+# All paths relative to project root.
+
+dataset:
+  name: "daic"
+  manifest_path: "data/processed/daic/manifest.csv"
+  windows_path: "data/processed/daic/windows.parquet"
+  turns_dir: "data/processed/daic/turns"
+  features_dir: "data/processed/daic/features"
+  features_seq_dir: "data/processed/daic/features_seq/turns"
+
+models:
+  late_fusion_checkpoint: "data/processed/daic/checkpoints/late_fusion_seed42.pt"
+  cma_checkpoint: "data/processed/daic/checkpoints_phase6/cross_modal_attention_1layer_seed_42.pt"
+
+parameters:
+  scales: [30, 75, 120]
+  seed: 42
+  phq8_max_score: 24.0
+  shap_background_samples: 100
+  top_k_turns_per_participant: 5
+
+outputs:
+  figures_dir: "results/figures"
+  occlusion_csv: "results/turn_occlusion_importance.csv"
+  top_turns_csv: "results/top_turns_per_participant.csv"
+  shap_csv: "results/shap_modality_contributions.csv"
+  report_md: "results/explainability.md"
+
